@@ -11,9 +11,6 @@ body {
     letter-spacing: 0.02em;
 }
 
-img {
-    display: block;
-}
 
 .container {
     width: 1158px;
@@ -31,7 +28,9 @@ nav {
     align-items: center;
 }
 
-
+.mob-menu {
+    display: none;
+}
 
 header {
     width: 100%;
@@ -51,7 +50,7 @@ header {
 }
 
 .menu-toggle {
-    display: block;
+    display: none;
     background-color: transparent;
     border: none;
     position: absolute;
@@ -60,57 +59,6 @@ header {
     right: 16px;
     top: 24px;
     cursor: pointer;
-}
-
-.menu-content {
-    width: 428px;
-    min-height: 796px;
-    background-color: var(--white-background);
-    display: flex;
-    flex-direction: column;
-}
-
-.mobile-list {
-    flex-direction: column;
-}
-
-.mobile {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 40px;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-}
-
-.mobile-menu {
-    display: flex;
-    flex-direction: column;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 40px;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-}
-
-.mobile-mail {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 40px;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-    color: var(--pressed-state);
-}
-
-.mobile-address {
-
-}
-
-.mobile-address-list {
-
-}
-
-.mobile-soc {
-
 }
 
 .svg-hamburger {
@@ -247,6 +195,14 @@ nav li a:focus {
     height: 600px;
     background-color: var(--hero-background);
     padding: 188px 0;
+}
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .section-main {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-officeX2.jpg);
+    }
 }
 
 .main-text {
@@ -765,11 +721,6 @@ nav li a:focus {
     overflow: hidden;
 }
 
-/* @keyframes informator {} */
-
-
-
-
 .folio {
     color: var(--pressed-state);
     position: relative;
@@ -870,6 +821,7 @@ nav li a:focus {
     color: var(--white-background);
     line-height: 1.5;
     letter-spacing: 0.04em;
+    padding-left: 15px;
 }
 
 .input-button {
@@ -1031,6 +983,7 @@ nav li a:focus {
 }
 
 .span-svg {
+    width: 16px;height: 16px;
     position: absolute;
 }
 
@@ -1063,6 +1016,7 @@ nav li a:focus {
 
 
 .policy {
+    margin-left: 24px;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
@@ -1070,12 +1024,15 @@ nav li a:focus {
 }
 
 .label-span {
+    display: inline-flex;
+    position: absolute;
+    margin-top: 5px;
+    left: 24px;
     width: 16px;
     height: 16px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    display: inline-flex;
     align-items: center;
     justify-content: center;
     fill: transparent;
@@ -1159,13 +1116,28 @@ nav li a:focus {
         display: none;
     }
 
+.mob-menu {
+    display: block;
+}
+
     .address {
         display: none;
     }
 
     .section-main {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/Dark-bg-mobile.jpg);
         width: 428px;
         height: 432px;
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .section-main {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/Dark-bg-mobile-2x.jpg);
+
+
+        }
     }
 
     .menu-toggle {
@@ -1326,6 +1298,19 @@ nav li a:focus {
         height: 72px;
     }
 
+    .section-main {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/Dark-bg.jpg);
+    }
+
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .section-main {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/Dark-bg-2x.jpg);
+        }
+    }
+
     .menu-toggle {
         display: none;
     }
@@ -1481,4 +1466,94 @@ nav li a:focus {
     .subscribe {
         margin-left: 0;
     }
+}
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.mob-list {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+    margin-top: 34px;
+}
+
+
+.mob-address {
+    margin-top: 284px;
+    text-decoration: none;
+    font-style: normal;
+    height: 104px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mob-mail {
+    color: var(--text);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+}
+
+.primary {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--pressed-state);
+}
+
+.mobile-soc {
+    gap: 56px;
+    padding: 0;
+    width: 328px;
+    margin-top: 48px;
+}
+
+.mob-menu {
+    position: absolute;
+    background-color: var(--white-background);
+    z-index: 1;
+    width: 429px;
+    min-height: 796px;
+    padding-left: 40px;
+    margin-left: -15px;
+}
+
+.cross-mobile {
+    margin-left: 340px;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    background-color: var(--accent);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cross-mobile:hover,
+.cross-mobile:focus {
+    border: none;
+    background-color: var(--pressed-state);
+    fill: var(--white-background);
 }

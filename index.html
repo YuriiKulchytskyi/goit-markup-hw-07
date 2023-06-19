@@ -27,11 +27,45 @@
                     <li><a href="" class="nav-menu link">Contacts</a></li>
                 </ul>
             </nav>
-            <button class="menu-toggle" data-open-menu>
+            <button class="menu-toggle" data-menu-open>
                 <svg class="svg-hamburger" width="32" height="22">
                     <use href="./images/icons.svg#icon-charm_menu-hamburger"></use>
                 </svg>
             </button>
+            <div class="mob-menu" data-menu>
+                <button type="button" class="cross-mobile" data-menu-close>
+                    <svg class="cross-svg" width="8" height="8">
+                        <use href="./images/icons.svg#icon-close-cross"></use>
+                    </svg>
+                </button>
+                <ul class="list mob-list">
+                    <li><a href="./index.html" class="mob-menu-li link studio">Studio</a> </li>
+                    <li><a href="./portfolio.html" class="mob-menu-li link ">Portfolio</a></li>
+                    <li><a href="" class="mob-menu-li link">Contacts</a></li>
+                </ul>
+                <address class="mob-address list">
+                    <li><a href="tel:+110001111111" class="mob-mail link primary">+11 (000) 111-11-11</a></li>
+                    <li><a href="mailto:info@devstudio.com" class="mob-mail link">info@devstudio.com</a></li>
+                </address>
+                <ul class="list soc-list-footer mobile-soc">
+                    <li class="soc"><a href="" class="a-soc-footer link">
+                            <svg class="svg-studio-footer-section" width="24" height="24">
+                                <use href="./images/icons.svg#icon-instagram"></use>
+                            </svg></a></li>
+                    <li class="soc"><a href="" class="a-soc-footer link">
+                            <svg class="svg-studio-footer-section" width="24" height="24">
+                                <use href="./images/icons.svg#icon-twitter"></use>
+                            </svg></a></li>
+                    <li class="soc"><a href="" class="a-soc-footer link">
+                            <svg class="svg-studio-footer-section" width="24" height="24">
+                                <use href="./images/icons.svg#icon-facebook"></use>
+                            </svg></a></li>
+                    <li class="soc"><a href="" class="a-soc-footer link">
+                            <svg class="svg-studio-footer-section" width="24" height="24">
+                                <use href="./images/icons.svg#icon-linkedin"></use>
+                            </svg></a></li>
+                </ul>
+            </div>
             <address class="address">
                 <ul class="list-address">
                     <li><a href="mailto:info@devstudio.com" class="mail link">info@devstudio.com</a></li>
@@ -106,9 +140,12 @@
             <div class="container">
                 <h2 class="about-section">what are we doing</h2>
                 <ul class="list doing">
-                    <li class="image"><img src="./images/img1.jpg" alt="monitor" width="360"></li>
-                    <li class="image"><img src="./images/img2.jpg" alt="phone screen" width="360"></li>
-                    <li class="image"><img src="./images/img3.jpg" alt="phone in hand" width="360"></li>
+                    <li class="image"><img srcset="./images/img1.jpg 1x, ./images/img1x2.jpg 2x" src="./images/img1.jpg"
+                            alt="monitor" width="360"></li>
+                    <li class="image"><img srcset="./images/img2.jpg 1x, ./images/img2x2.jpg 2x" src="./images/img2.jpg"
+                            alt="phone screen" width="360"></li>
+                    <li class="image"><img srcset="./images/img3.jpg 1x, ./images/img3x2.jpg 2x" src="./images/img3.jpg"
+                            alt="phone in hand" width="360"></li>
                 </ul>
             </div>
         </section>
@@ -117,7 +154,8 @@
                 <h2 class="about-section">Our Team</h2>
                 <ul class="list staff">
                     <li class="person">
-                        <img src="./images/img.jpg" alt="Mark" width="264">
+                        <img srcset="./images/img.jpg 1x, ./images/markX2.jpg" src="./images/img.jpg" alt="Mark"
+                            width="264">
                         <div class="content">
                             <h3 class="about worker">Mark Guerrero</h3>
                             <p class="paragraph parag-fourth">Product Designer</p>
@@ -142,7 +180,8 @@
                         </div>
                     </li>
                     <li class="person">
-                        <img src="./images/img(1).jpg" alt="Tom" width="264">
+                        <img srcset="./images/img(1).jpg 1x, ./images/tomX2.jpg 2x" src="./images/img(1).jpg" alt="Tom"
+                            width="264">
                         <div class="content">
                             <h3 class="about worker">Tom Ford</h3>
                             <p class="paragraph parag-fourth">Frontend Developer</p>
@@ -167,7 +206,8 @@
                         </div>
                     </li>
                     <li class="person">
-                        <img src="./images/img(2).jpg" alt="Camila" width="264">
+                        <img srcset="./images/img(2).jpg 1x, ./images/camilaX2.jpg 2x" src="./images/img(2).jpg"
+                            alt="Camila" width="264">
                         <div class="content">
                             <h3 class="about worker">Camila Garcia</h3>
                             <p class="paragraph parag-fourth">Marketing</p>
@@ -192,7 +232,8 @@
                         </div>
                     </li>
                     <li class="person">
-                        <img src="./images/img(3).jpg" alt="Daniel" width="264">
+                        <img srcset="./images/img(3).jpg 1x, ./images/danielX2.jpg 2x" src="./images/img(3).jpg"
+                            alt="Daniel" width="264">
                         <div class="content">
                             <h3 class="about worker">Daniel Wilson</h3>
                             <p class="paragraph parag-fourth">UI Designer</p>
@@ -313,6 +354,7 @@
             </div>
         </div>
     </footer>
+
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="cross" data-modal-close>
@@ -362,56 +404,18 @@
 
                 </div>
                 <div class="context-modal privacy">
-                    <input type="checkbox" class="check-input visually-hidden" id="user-privacy" value="true"
-                        name="user-privacy" />
-                    <label for="user-privacy" class="policy"> I accept the terms and conditions of the
-                        <span class="label-span"> <svg class="span-svg" width="10" height="8">
-                                <use href="./images/icons.svg#icon-Checkbox-1"></use>
-                            </svg>
-                        </span>
-                        <a href="" class="label-a">Privacy Policy</a>
-                    </label>
-                </div>
+                    <div class="context-modal privacy">
+                        <input type="checkbox" class="check-input visually-hidden" id="user-privacy" value="true" name="user-privacy" />
+                        <label for="user-privacy" class="policy"> I accept the terms and conditions of the 
+                            <span class="label-span"> <svg class="span-svg" width="10" height="8">
+                                    <use href="./images/icons.svg#icon-Checkbox-1"></use>
+                                </svg>
+                            </span>
+                            <a href="" class="label-a">Privacy Policy</a>
+                        </label>
+                    </div>
                 <button class="send">Send</button>
             </form>
-        </div>
-    </div>
-    <div class="mobile-menu is-hidden" data-menu-container>
-        <div class="menu-content">
-            <button type="button" class="cross" data-close-menu>
-                <svg class="cross-svg" width="8" height="8">
-                    <use href="./images/icons.svg#icon-close-cross"></use>
-                </svg>
-            </button>
-            <ul class="list mobile-list">
-                <li><a href="./index.html" class="nav-menu link studio mobile">Studio</a> </li>
-                <li><a href="./portfolio.html" class="nav-menu link mobile">Portfolio</a></li>
-                <li><a href="" class="nav-menu link mobile">Contacts</a></li>
-            </ul>
-            <address class="mobile-address">
-                <ul class="mobile-address-list">
-                    <li><a href="tel:+110001111111" class="mail link mobile-mail">+11 (000) 111-11-11</a></li>
-                    <li><a href="mailto:info@devstudio.com" class="mail link ">info@devstudio.com</a></li>
-                </ul>
-            </address>
-            <ul class="list soc-list-footer mobile-soc">
-                <li class="soc"><a href="" class="a-soc-footer link">
-                        <svg class="svg-studio-footer-section" width="24" height="24">
-                            <use href="./images/icons.svg#icon-instagram"></use>
-                        </svg></a></li>
-                <li class="soc"><a href="" class="a-soc-footer link">
-                        <svg class="svg-studio-footer-section" width="24" height="24">
-                            <use href="./images/icons.svg#icon-twitter"></use>
-                        </svg></a></li>
-                <li class="soc"><a href="" class="a-soc-footer link">
-                        <svg class="svg-studio-footer-section" width="24" height="24">
-                            <use href="./images/icons.svg#icon-facebook"></use>
-                        </svg></a></li>
-                <li class="soc"><a href="" class="a-soc-footer link">
-                        <svg class="svg-studio-footer-section" width="24" height="24">
-                            <use href="./images/icons.svg#icon-linkedin"></use>
-                        </svg></a></li>
-            </ul>
         </div>
     </div>
     <script src="./js/modal.js"></script>
