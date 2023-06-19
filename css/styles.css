@@ -838,8 +838,6 @@ nav li a:focus {
     min-width: 165px;
     height: 40px;
     border-radius: 4px;
-    /* margin-top: 16px;
-    margin-left: 24px; */
     color: var(--white-background);
     font-family: "Roboto", sans-serif;
     font-size: 16px;
@@ -1530,7 +1528,7 @@ img {
     position: absolute;
     background-color: var(--white-background);
     z-index: 1;
-    width: 429px;
+    width: 100%;
     min-height: 796px;
     padding-left: 40px;
     margin-left: -15px;
