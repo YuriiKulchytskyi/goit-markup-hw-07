@@ -192,7 +192,6 @@ nav li a:focus {
     background-size: cover;
     position: relative;
     max-width: 1440px;
-    height: 600px;
     background-color: var(--hero-background);
     padding: 188px 0;
 }
@@ -207,7 +206,6 @@ nav li a:focus {
 
 .main-text {
     max-width: 496px;
-    height: 120px;
     margin-top: 0;
     margin-left: 331px;
     line-height: 1.07;
@@ -260,8 +258,6 @@ nav li a:focus {
     width: 100%;
     height: 112px;
     background-color: var(--light);
-    margin-top: -112px;
-    padding: 24px 100px;
     align-items: center;
     justify-content: center;
     border-radius: 4px;
@@ -279,7 +275,6 @@ nav li a:focus {
 
 
 .about-list {
-    margin-top: 120px;
     display: flex;
     gap: 24px;
 }
@@ -521,7 +516,7 @@ nav li a:focus {
     color: var(--light);
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.11;
+    line-height: 1.5;
     /* margin-bottom: 16px; */
 }
 
@@ -900,7 +895,9 @@ nav li a:focus {
 
 }
 
-
+.backdrop {
+    width: 100%;
+}
 
 .input-wrap {
     position: relative;
@@ -981,7 +978,8 @@ nav li a:focus {
 }
 
 .span-svg {
-    width: 16px;height: 16px;
+    width: 16px;
+    height: 16px;
     position: absolute;
 }
 
@@ -1102,7 +1100,7 @@ nav li a:focus {
     }
 
     .container {
-        width: 428px;
+        width: 100%;
     }
 
 
@@ -1114,9 +1112,9 @@ nav li a:focus {
         display: none;
     }
 
-.mob-menu {
-    display: block;
-}
+    .mob-menu {
+        display: block;
+    }
 
     .address {
         display: none;
@@ -1124,8 +1122,7 @@ nav li a:focus {
 
     .section-main {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/Dark-bg-mobile.jpg);
-        width: 428px;
-        height: 432px;
+        padding: 112px 0;
     }
 
     @media (min-device-pixel-ratio: 2),
@@ -1149,6 +1146,7 @@ nav li a:focus {
         font-size: 36px;
         line-height: 40px;
         margin: 0 auto;
+        margin-bottom: 72px;
     }
 
     .order-button {
@@ -1161,6 +1159,8 @@ nav li a:focus {
 
     .about-list {
         flex-direction: column;
+        margin-top: 0;
+        gap: 72px
     }
 
 
@@ -1173,10 +1173,6 @@ nav li a:focus {
         text-align: center;
     }
 
-    .about-list {
-        margin-top: 0;
-        gap: 72px
-    }
 
     .paragraph {
         width: 396px;
@@ -1278,21 +1274,28 @@ nav li a:focus {
         width: 398px;
     }
 
+
     .modal {
         width: 392px;
-        top: 34%;
-        left: 14.8%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
     }
 }
 
 
 @media screen and (min-width:768px) and (max-width: 1157px) {
+
+    body {
+        width: 100%;
+    }
+
     .container {
-        width: 768px;
+        width: 100%;
     }
 
     header {
-        width: 768px;
+        width: 100%;
         height: 72px;
     }
 
@@ -1329,36 +1332,38 @@ nav li a:focus {
         margin-left: 35px;
     }
 
+    .section {
+        width: 100%;
+    }
+
     .section-main {
-        width: 768px;
+        width: 100%;
         height: 436px;
         padding-top: 112px;
         margin-right: 0;
     }
 
     .main-text {
-        margin-left: 136px;
+        margin: 0 auto;
+        margin-bottom: 36px;
     }
 
     .order-button {
-        margin-left: 300px;
+        margin: 0 auto;
     }
 
     .icon {
         display: none;
     }
 
-
-    .second {
-        width: 768px;
-        margin-left: 0;
-        margin-right: 0;
-        padding-top: 0;
-        padding-bottom: 0;
+    .section {
+        display: flex;
+        justify-content: center;
+        padding-top: 96px;
+        padding-bottom: 96px;
     }
 
     .about-list {
-        margin-top: 96px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1377,7 +1382,6 @@ nav li a:focus {
 
     .paragraph {
         width: 356px;
-        margin-top: 8px;
     }
 
     .third {
@@ -1385,20 +1389,14 @@ nav li a:focus {
     }
 
     .our-team {
-        width: 768px;
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 96px;
-
+        padding: 96px 108px;
     }
 
     .staff {
-        width: 0;
+        width: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 24px;
-        padding-left: 93px;
-        margin-right: 0;
     }
 
 
@@ -1419,31 +1417,27 @@ nav li a:focus {
     }
 
     .customers {
-        width: 768px;
-        padding-top: 96px;
+        padding: 96px 93px;
+
     }
 
 
-
     .customer-list {
-        width: 552px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         column-gap: 24px;
         row-gap: 72px;
-        padding-left: 93px;
         margin-right: 0;
     }
 
     .footer {
-        width: 768px;
+        width: 100%;
+        padding: 96px 93px;
 
     }
 
     .footer-container {
-        width: 768px;
         margin-right: 0;
-        padding-left: 93px;
         display: flex;
         flex-wrap: wrap;
     }
@@ -1529,16 +1523,20 @@ img {
     background-color: var(--white-background);
     z-index: 1;
     width: 100%;
-    min-height: 796px;
-    padding-left: 40px;
+    height: 100vh;
     margin-left: -15px;
+    padding-left: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+}
+
+.mob-menu-li {
+    color: var(--dark);
 }
 
 .cross-mobile {
     margin-left: 340px;
-    margin-top: 40px;
-    justify-content: center;
-    align-items: center;
     padding: 0;
     width: 24px;
     height: 24px;
@@ -1549,9 +1547,6 @@ img {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.cross-mobile:hover,
-.cross-mobile:focus {
-    border: none;
-    background-color: var(--pressed-state);
-    fill: var(--white-background);
+.active {
+    color: var(--pressed-state);
 }
